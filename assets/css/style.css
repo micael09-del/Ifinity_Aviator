@@ -257,3 +257,89 @@ body {
   }
   
 }
+
+.logo{
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-list{
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.nav-link{
+  transition: 0.3s;
+}
+
+.nav-link:hover{
+  color: aqua;
+}
+
+.nav-toggle-btn{
+  display: none;
+}
+
+.navbar,
+.navbar-active{
+  all: unset;
+  display: none;
+}
+
+
+/*dropdown*/
+
+.dropdown-toggle{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dropdown-item{
+  position: relative;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: var(--roxo-claro);
+  box-shadow: 0 5px 10px hsl(278, 83%, 65%); 
+  border-radius: 10px;
+  min-width: 150px;
+  padding: 0.5rem 0;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.dropdown-link{
+  padding: 0.8rem 1.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-link:hover{
+  background: var(--gradient1);
+  color: var(--roxo-medio);
+}
+
+.dropdown-item.active .dropdown-menu{
+  display: flex;
+}
+
+/*Banner*/
+.banner video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
