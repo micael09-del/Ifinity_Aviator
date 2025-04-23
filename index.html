@@ -47,7 +47,7 @@
                     <!--dropdown-->
 
                     <li class="dropdown-item">
-                        <div class="navbar-link">
+                        <div class="navbar-link dropdown-toggle" data-dropdown-toggle>
                             serviços <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
 
@@ -74,23 +74,28 @@
 
             <a href="#" class="btn">Login</a>
 
-            <button class="nav-toggle-btn">
-                <ion-icon name="grid-outline"></ion-icon>
+
+            <button class="search-btn" id="searchToggle" aria-label="Buscar">
+                <ion-icon name="search-outline"></ion-icon>
             </button>
 
 
-
-
-
-
-
-
+            <button class="nav-toggle-btn">
+                <ion-icon name="grid-outline"></ion-icon>
+            </button>
         </div>
     </header>
 
+    <!--Banner-->
+    <section class="banner">
+        <video autoplay muted loop>
+            <source src="#">
+        </video>
+    </section>
+
 
     <!--script--> 
-<script src="js/script.js"></script>
+<script src="assets/js/script.js"></script>
    <!--ion Icons--> 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
