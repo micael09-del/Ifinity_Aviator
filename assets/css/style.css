@@ -7,7 +7,7 @@
 :root {
   /*==== colors ====*/
   --roxo-claro:hsl(300, 100%, 50%);
-  --roxo-medio: hsl(278, 83%, 65%);
+  --roxo-medio: #ba5cf0;
   --roxo-escuro: hsla(273, 83%, 55%, 0.3);
   --roxo-escuro1:hsl(278, 58%, 41%);
   --black-color-light: hsl(220, 24%, 15%);
@@ -15,19 +15,26 @@
   --white-color: #fff;
   --body-color: hsl(0, 0%, 0%);
   --bg-color: rgba(17, 17, 17, 0.95);
-  --roxo-color: hsl(268, 79%, 50%);
   --gradient-color: linear-gradient(43deg, #2e5789 0%, #af14bf 46%, #ac70ff 100%)
 
   /*==== gradiente ====*/
   --gradient1: linear-gradient(
     to right bottom,
-    hsl(288, 88%, 75%),
-    hsl(276, 61%, 20%),
-    hsl(288, 70%, 35%),
-    hsl(278, 85%, 45%),
-    hsl(297, 80%, 17%),
-    hsl(300, 100%, 50%)
     linear-gradient(43deg, #2e5789 0%, #af14bf 46%, #ac70ff 100%)
+  );
+
+  --gradient2: linear-gradient(
+    to right bottom,
+    hsl(332, 100%, 95%),
+    hsl(295, 100%, 63%),
+    hsl(261, 100%, 57%)
+  );
+
+  
+  --gradient3: linear-gradient(
+    hsl(261, 100%, 57%),
+    hsl(251, 100%, 24%),
+    hsl(241, 100%, 9%)
   );
 
   /*====cor do texto ====*/
@@ -187,7 +194,7 @@ body {
 
 .btn{
   position: relative;
-  background-color: var(--roxo-medio);
+  background-color: var(--gradient-color);
   color: var(--text-white);
   font-size: var(--fs-8);
   font-weight: var(--weight-semiBold);
@@ -197,33 +204,36 @@ body {
   place-items: center;
   padding-inline: 30px;
   border: #a644db;
-  clip-path: var(--clip-path-3);
+  border-radius: 15px;
+  transition: transform 0.7s ease, color 0.6s ease;
+  box-shadow: 0 5px 10px hsl(273, 100%, 17%);
 }
 
 .btn:hover{
+  color: var(--roxo-escuro1);
+  background-color: var(--white-color);
   transform: scale(1.05);
 }
 
-.nav-toggle-btn{
-  display: none;
+.search-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--fs-5);
+  color: var(--white-color);
+  margin-left: 1rem;
+  transition: transform 0.2s ease,color 0.3s ease;
 }
 
-.dropdown-menu{
-  display: none;
+.search-btn:hover{
+  transform: scale(1.2);
+  color: var(--roxo-medio);
 }
 
 
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
-.nav-toggle-btn{
-  display: none;
-}
-
-.dropdown-menu{
-  display: none;
-}
-
 
 .logo img{
   width: 140px;
@@ -258,25 +268,20 @@ body {
   
 }
 
-.logo{
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
 
-.nav-list{
+
+.navbar-list{
   display: flex;
   justify-content: center;
   gap: 2.5rem;
 }
 
-.nav-link{
+.navbar-link{
   transition: 0.3s;
 }
 
-.nav-link:hover{
-  color: aqua;
+.navbar-link:hover{
+  color:var(--roxo-medio);
 }
 
 .nav-toggle-btn{
@@ -286,7 +291,7 @@ body {
 .navbar,
 .navbar-active{
   all: unset;
-  display: none;
+  display: block;
 }
 
 
@@ -298,8 +303,11 @@ body {
   gap: 0.4rem;
 }
 
+
+
 .dropdown-item{
   position: relative;
+  
 }
 
 .dropdown-menu{
@@ -307,13 +315,14 @@ body {
   position: absolute;
   top: 120%;
   left: 0;
-  background-color: var(--roxo-claro);
+  background-color: var(--roxo-medio);
   box-shadow: 0 5px 10px hsl(278, 83%, 65%); 
   border-radius: 10px;
   min-width: 150px;
   padding: 0.5rem 0;
   z-index: 10;
   flex-direction: column;
+  gap: 15px;
 }
 
 .dropdown-link{
@@ -324,8 +333,10 @@ body {
 }
 
 .dropdown-link:hover{
-  background: var(--gradient1);
-  color: var(--roxo-medio);
+  background-color: var(--white-color);
+  border-radius: 10px;
+  color: var(--roxo-escuro1);
+  transition: transform 0.8s ease, color 0.7s ease;
 }
 
 .dropdown-item.active .dropdown-menu{
