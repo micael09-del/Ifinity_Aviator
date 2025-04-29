@@ -77,30 +77,44 @@
 
             <a href="#" class="btn">Login</a>
 
-
+            <!--Botão Buscar-->
             <button class="search-btn" id="searchToggle" aria-label="Buscar">
                 <ion-icon name="search-outline"></ion-icon>
             </button>
-
+    
+            <!-- Overlay da busca -->
+         <div class="search-overlay" id="searchOverlay">
+            <button class="close-btn" id="closeSearch" aria-label="Fechar busca">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="search-container">
+                <input
+                type="text"
+                placeholder="O que você está procurando?"
+                class="search-input"
+                autofocus
+                />
+            </div>
+        </div>
 
             <button class="nav-toggle-btn">
                 <ion-icon name="grid-outline"></ion-icon>
             </button>
         </div>
     </header>
-
     <!--Banner-->
     <section class="banner">
         <video autoplay muted loop>
-            <source src="assets/videos/costa.mp4">
+            <source src="assets/videos/avião.mp4">
         </video>
     </section>
 
 
     <!--script--> 
-<script src="assets/js/script.js"></script>
-   <!--ion Icons--> 
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/script.js"></script>
+   <!--ion Icons--> 
 </body>
 </html>

@@ -6,4 +6,51 @@ document.addEventListener('DOMContentLoaded',function(){
             parent.classList.toggle('active');
         })
       })
+    
+      document.addEventListener('click', function (e) {
+           dropdownToggle.forEach((toggle) => {
+            const parent = toggle.closest('.dropdown-item');
+              if (!parent.contains(e.target)){
+                parent.classList.remove('active')
+              }
+           })
+      })
+})
+
+
+const searchToggle = document.getElementById('searchToggle');
+const searchOverlay = document.getElementById('searchOverlay');
+const closeSearch = document.getElementById('closeSearch');
+const header = document.querySelector('header');
+
+searchToggle.addEventListener('click', () => {
+ searchOverlay.style.display = 'flex';
+ 
+ setTimeout(() => {
+  searchOverlay.querySelector('.search-input').focus();
+ }, 100);
+
+})
+
+searchToggle.addEventListener('click', () => {
+ header.style.background = 'none';
+
+})
+
+
+//fechar o botão de pesquisa
+closeSearch.addEventListener('click', () => {
+  searchOverlay.style.display = 'none';
+})
+
+closeSearch.addEventListener('click', () => {
+  header.style.backgroundColor = 'hsl(278, 58%, 41%)';
+})
+
+//fechar com o esc
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    searchOverlay.style.display = 'none';
+  }
 })
