@@ -8,6 +8,7 @@
   /*==== colors ====*/
   --roxo-claro:hsl(300, 100%, 50%);
   --roxo-medio: #ba5cf0;
+  --roxo-medio1: #c59edc;
   --roxo-escuro: hsla(273, 83%, 55%, 0.3);
   --roxo-escuro1:hsl(278, 58%, 41%);
   --black-color-light: hsl(220, 24%, 15%);
@@ -251,6 +252,7 @@ body {
   padding: 0px 12px;
   z-index: 4;
   box-shadow: var(--shadow);
+  border-radius:  0  0px 20px 20px;
 }
 
 .header.active{
@@ -281,7 +283,7 @@ body {
 }
 
 .navbar-link:hover{
-  color:var(--roxo-medio);
+  color:var(--roxo-medio1);
 }
 
 .nav-toggle-btn{
@@ -330,6 +332,7 @@ body {
   font-size: 0.8rem;
   letter-spacing: 0.5px;
   transition: background 0.3s, color 0.3s;
+  font-size: 15px;
 }
 
 .dropdown-link:hover{
